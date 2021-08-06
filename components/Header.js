@@ -13,9 +13,8 @@ function Header({placeholder}) {
     const [searchInput, setSearchInput] = useState("");
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
-    const [noOfGuesets, setNoOfGuests] = useState(1);
+    const [noOfGuests, setNoOfGuests] = useState(1);
     const router = useRouter();
-
     const selectionRange={
         startDate: startDate,
         endDate: endDate,
@@ -97,7 +96,7 @@ function Header({placeholder}) {
                    <UsersIcon className="h-5"/>
                    <input 
                    min={1}
-                   value={noOfGuesets}
+                   value={noOfGuests}
                    onChange={(e) => setNoOfGuests(e.target.value)} type="number" className="w-12 pl-2 text-lg outline-none text-red-400" />
                 </div>
                     <div className="flex">
