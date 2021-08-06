@@ -13,8 +13,9 @@ function Header({placeholder}) {
     const [searchInput, setSearchInput] = useState("");
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
-    const [noOfGuests, setNoOfGuests] = useState(1);
+    const [noOfGuesets, setNoOfGuests] = useState(1);
     const router = useRouter();
+
     const selectionRange={
         startDate: startDate,
         endDate: endDate,
@@ -66,7 +67,7 @@ function Header({placeholder}) {
                <input 
                value={searchInput}
                onChange={(e) => setSearchInput(e.target.value) } className="pl-5 bg-transparent outline-none
-               text-gray-600 text-sm flex-grow" type="text" placeholder={placeholder || "Start your search"} />
+               text-gray-600 text-sm flex-grow" type="text" placeholder={placeholder || "Start your Search"} />
                <SearchIcon className="hidden h-8 md:inline-flex bg-red-400 p-2 cursor-pointer
                 text-white rounded-full mx-auto md:mx-2"/>
             </div>
@@ -96,7 +97,7 @@ function Header({placeholder}) {
                    <UsersIcon className="h-5"/>
                    <input 
                    min={1}
-                   value={noOfGuests}
+                   value={noOfGuesets}
                    onChange={(e) => setNoOfGuests(e.target.value)} type="number" className="w-12 pl-2 text-lg outline-none text-red-400" />
                 </div>
                     <div className="flex">
